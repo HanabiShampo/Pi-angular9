@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "GestionClubSportif"
+    }
+  },
+  "defaultProject": "GestionClubSportif",
+  "cli": {
+    "analytics": "1558ddd3-0ade-4649-9ffc-9a4fe6985c71"
+  }
 }
