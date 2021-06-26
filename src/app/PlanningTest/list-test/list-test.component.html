@@ -1,0 +1,29 @@
+<div class="container">
+    <h2> Planning Tests List</h2>
+    
+
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th class="hidden">Id</th>
+        <th>Titre</th>
+        <th>Type</th>
+        <th>Lieu</th>
+        <th>Date</th>
+        <th>Heure</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let test of planningTest">
+        <td class="hidden">{{test.id}}</td>
+        <td>{{test.Titre}}</td>
+      <td>{{test.Type}}</td>
+      <td>{{test.Lieu}}</td>
+      <td>{{test.Date}}</td>
+      <td>{{test.Heure}}</td>
+        
+
+      </tr>
+      </tbody>
+    </table>
+  </div>
