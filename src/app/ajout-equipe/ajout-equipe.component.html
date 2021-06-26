@@ -1,0 +1,48 @@
+<form #f="ngForm">
+    <input 
+    type="text"
+      name="nom" 
+      placeholder="title" 
+      ngModel
+      
+    >
+    <input 
+    type="text"
+      name="niveau" 
+      placeholder="title" 
+      ngModel
+      
+    >
+    <input 
+      type="text"
+        name="entraineur" 
+        placeholder="title" 
+        ngModel
+        
+      >
+      <input 
+      type="text"
+        name="medecin" 
+        placeholder="title" 
+        ngModel
+        
+      >
+      <input 
+      type="text"
+        name="log" 
+        placeholder="title" 
+        ngModel
+        
+      >
+      <input 
+      type="text"
+        name="joueurs" 
+        placeholder="title" 
+        ngModel
+        
+      >
+      <input type="submit" value="send" (click)="submit(f.value)">
+</form>
+      
+    
+        

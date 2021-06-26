@@ -1,0 +1,37 @@
+<div align="center">
+
+    <form>
+      <h2>Liste des equipe </h2>
+      <div><br></div>
+    
+      <div class="panel-body">
+        <table class="table table-bordered">
+          <thead class="thead-light">
+            <tr>
+              <th>nom</th>
+              <th>niveau</th>
+              <th>entraineur</th>
+              <th>medecin</th>
+
+              <th>log</th>
+              <th>joueurs</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let o of Equipe ">
+              <td>{{o.nom}}</td>
+              <td>{{o.niveau}}</td>
+              <td>{{o.entraineur}}</td>
+              <td>{{o.medcin}}</td>
+              <td>{{o.log}}</td>
+              <td>{{o.joueurs}}</td>
+
+
+             
+
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </form>
+  </div>
