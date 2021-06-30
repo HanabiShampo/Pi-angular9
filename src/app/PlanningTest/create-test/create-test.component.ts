@@ -18,11 +18,11 @@ export class CreateTestComponent implements OnInit {
   ngOnInit(): void {
     this.addForm = this.formBuilder.group({
       id: [],
-      Titre: ['', Validators.required],
-      Type: ['', Validators.required],
-      Lieu: ['', Validators.required],
-      Date: ['', Validators.required],
-      Heure: ['', Validators.required]
+      titre: ['', Validators.required],
+      type: ['', Validators.required],
+      lieu: ['', Validators.required],
+      date: ['', Validators.required],
+      heure: ['', Validators.required]
     });
   }
 

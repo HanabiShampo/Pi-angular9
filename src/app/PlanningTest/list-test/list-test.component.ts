@@ -22,8 +22,8 @@ export class ListTestComponent implements OnInit {
   });
   }
 
-  addPlanning(): void {
+  addPlanning() {
     this.router.navigate(['create-test']);
   }
-
+ 
 }

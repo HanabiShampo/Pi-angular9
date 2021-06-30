@@ -16,13 +16,12 @@
       <tbody>
       <tr *ngFor="let test of planningTest">
         <td class="hidden">{{test.id}}</td>
-        <td>{{test.Titre}}</td>
-      <td>{{test.Type}}</td>
-      <td>{{test.Lieu}}</td>
-      <td>{{test.Date}}</td>
-      <td>{{test.Heure}}</td>
-        
-
+        <td>{{test.titre}}</td>
+      <td>{{test.type}}</td>
+      <td>{{test.lieu}}</td>
+      <td>{{test.date}}</td>
+      <td>{{test.heure}}</td>
+      <button type="submit" class="button1" [routerLink]="['/edit-test/',test.id]" >Update</button>
       </tr>
       </tbody>
     </table>

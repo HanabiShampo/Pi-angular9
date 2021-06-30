@@ -4,11 +4,12 @@ import { PlanningTest } from '../models/planning-test';
 import { Observable } from 'rxjs';
 
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class PlanningService {
-
+ 
   constructor(private http: HttpClient) { }
   baseUrl: string = 'http://127.0.0.1:8000/api';
 
@@ -24,12 +25,12 @@ export class PlanningService {
     return this.http.post(this.baseUrl+'/planning_tests', planningTest, {responseType: 'json'});
   }
 
-  updatePlanningTest(planningTest:PlanningTest) {
-    return this.http.put(this.baseUrl + '/planning_tests/' + planningTest.id,planningTest );
+  updatePlanningTest(id, planningTest:PlanningTest){
+    return this.http.put<PlanningTest>(this.baseUrl + '/planning_tests/'+ id,planningTest );
   }
-
+  
   deletePlannedTest(id: any) {
-    return this.http.delete(this.baseUrl + '/planning_tests/' + id , {responseType: 'json'} );
+    return this.http.delete(this.baseUrl + '/planning_tests/' + id , {responseType: 'text'} );
   }
 
   deleteAllPlannedTest(): Observable<any>  {
