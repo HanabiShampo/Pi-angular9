@@ -32,8 +32,11 @@ export class ListTestComponent implements OnInit {
         this.myArray =this.myArray.filter(test => test.id !=id) 
       });
         this.router.navigate(['list-test']);
-      
-    }
   
+    }
+
+  listMatch(){
+    this.router.navigate(['list-match']);
+  }
 
 }

@@ -1,0 +1,31 @@
+<div class="container">
+    <h2> Planning Matchs List</h2>
+      
+      
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th class="hidden">Id</th>
+        <th>Equipe1</th>
+        <th>Equipe2</th>
+        <th>Stade</th>
+        <th>Type</th>
+        <th>Date</th>
+        <th>Heure</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let test of myArray">
+        <td class="hidden">{{test.id}}</td>
+        <td>{{test.equipe1}}</td>
+      <td>{{test.equipe2}}</td>
+      <td>{{test.stade}}</td>
+      <td>{{test.type}}</td>
+      <td>{{test.date}}</td>
+      <td>{{test.heure}}</td>
+      
+      
+      </tr>
+      </tbody>
+    </table>
+  </div>

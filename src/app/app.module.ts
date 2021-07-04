@@ -9,13 +9,15 @@ import {HttpClientModule} from "@angular/common/http";
 import {ListTestComponent} from './PlanningTest/list-test/list-test.component';
 import { CreateTestComponent } from './PlanningTest/create-test/create-test.component';
 import { EditTestComponent } from './PlanningTest/edit-test/edit-test.component';
+import { ListMatchComponent } from './PlanningMatch/list-match/list-match.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListTestComponent,
     CreateTestComponent,
-    EditTestComponent
+    EditTestComponent,
+    ListMatchComponent
   ],
   imports: [
     BrowserModule,

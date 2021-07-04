@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { PlanningTest } from '../models/planning-test';
+import { PlanningMatch } from '../models/planning-match';
 import { Observable } from 'rxjs';
 
 
@@ -9,6 +10,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class PlanningService {
+
+  //                              Planning test service
+
   httpClient: any;
  
   constructor(private http: HttpClient) { }
@@ -34,8 +38,26 @@ export class PlanningService {
     return this.http.delete(this.baseUrl + '/planning_tests/' + id, {responseType: 'json'});
   }
 
-  deleteAllPlannedTest(): Observable<any>  {
-    return this.http.delete(this.baseUrl + '/planning_tests', {responseType: 'json'}  );
+  //                          Planning match service
+
+  getPlannedMatch() {
+    return this.http.get<PlanningMatch[]>(this.baseUrl+'/planning_matches');
+  }
+
+  getPlannedMatchById(id: any) {
+    return this.http.get<PlanningMatch>(this.baseUrl + '/planning_matches/' + id);
+  }
+
+  createPlanningMatch(planningMatch: PlanningMatch) {
+    return this.http.post(this.baseUrl+'/planning_matches', planningMatch, {responseType: 'json'});
+  }
+
+  updatePlanningMatch(id, planningMatch:PlanningMatch){
+    return this.http.put<PlanningMatch>(this.baseUrl + '/planning_matches/'+ id,planningMatch );
+  }
+  
+  deletePlannedMatch(id) {
+    return this.http.delete(this.baseUrl + '/planning_matches/' + id, {responseType: 'json'});
   }
 
 }
