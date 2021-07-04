@@ -20,4 +20,8 @@ export class ListMatchComponent implements OnInit {
   });
   }
 
+  addPlanning() {
+    this.router.navigate(['create-match']);
+  }
+
 }

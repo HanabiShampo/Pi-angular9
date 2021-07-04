@@ -10,6 +10,7 @@ import {ListTestComponent} from './PlanningTest/list-test/list-test.component';
 import { CreateTestComponent } from './PlanningTest/create-test/create-test.component';
 import { EditTestComponent } from './PlanningTest/edit-test/edit-test.component';
 import { ListMatchComponent } from './PlanningMatch/list-match/list-match.component';
+import { CreateMatchComponent } from './PlanningMatch/create-match/create-match.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ListMatchComponent } from './PlanningMatch/list-match/list-match.compon
     ListTestComponent,
     CreateTestComponent,
     EditTestComponent,
-    ListMatchComponent
+    ListMatchComponent,
+    CreateMatchComponent
   ],
   imports: [
     BrowserModule,
