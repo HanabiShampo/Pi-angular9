@@ -9,6 +9,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class PlanningService {
+  httpClient: any;
  
   constructor(private http: HttpClient) { }
   baseUrl: string = 'http://127.0.0.1:8000/api';
@@ -29,8 +30,8 @@ export class PlanningService {
     return this.http.put<PlanningTest>(this.baseUrl + '/planning_tests/'+ id,planningTest );
   }
   
-  deletePlannedTest(id: any) {
-    return this.http.delete(this.baseUrl + '/planning_tests/' + id , {responseType: 'text'} );
+  deletePlannedTest(id) {
+    return this.http.delete(this.baseUrl + '/planning_tests/' + id, {responseType: 'json'});
   }
 
   deleteAllPlannedTest(): Observable<any>  {

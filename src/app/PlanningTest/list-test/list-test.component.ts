@@ -9,15 +9,16 @@ import { PlanningTest } from '../../models/planning-test';
   styleUrls: ['./list-test.component.css']
 })
 export class ListTestComponent implements OnInit {
-
-  planningTest: PlanningTest[]= []
+  id:number;
+  
+  myArray: any = [];
 
   constructor(private router: Router, private planningService: PlanningService) {}
 
   ngOnInit(){
     this.planningService.getPlannedTest()
       .subscribe( data => {
-        this.planningTest = data['hydra:member'];
+        this.myArray = data['hydra:member'];
         console.log(data['hydra:member']);
   });
   }
@@ -26,4 +27,13 @@ export class ListTestComponent implements OnInit {
     this.router.navigate(['create-test']);
   }
  
+  deletePlanning(id) {
+      this.planningService.deletePlannedTest(id).subscribe(()=>{
+        this.myArray =this.myArray.filter(test => test.id !=id) 
+      });
+        this.router.navigate(['list-test']);
+      
+    }
+  
+
 }
