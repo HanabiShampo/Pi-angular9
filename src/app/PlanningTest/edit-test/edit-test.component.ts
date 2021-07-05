@@ -34,7 +34,6 @@ export class EditTestComponent implements OnInit {
      */
   this.route.params.subscribe(data =>{
     this.id = data.id;
-  
     this.planningService.getPlannedTestById(this.id).subscribe(eventData => {
       this.evv = eventData;
     });

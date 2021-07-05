@@ -11,6 +11,7 @@ import { CreateTestComponent } from './PlanningTest/create-test/create-test.comp
 import { EditTestComponent } from './PlanningTest/edit-test/edit-test.component';
 import { ListMatchComponent } from './PlanningMatch/list-match/list-match.component';
 import { CreateMatchComponent } from './PlanningMatch/create-match/create-match.component';
+import { EditMatchComponent } from './PlanningMatch/edit-match/edit-match.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { CreateMatchComponent } from './PlanningMatch/create-match/create-match.
     CreateTestComponent,
     EditTestComponent,
     ListMatchComponent,
-    CreateMatchComponent
+    CreateMatchComponent,
+    EditMatchComponent
   ],
   imports: [
     BrowserModule,

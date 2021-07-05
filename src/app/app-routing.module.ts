@@ -5,6 +5,7 @@ import {CreateTestComponent} from './PlanningTest/create-test/create-test.compon
 import {EditTestComponent} from './PlanningTest/edit-test/edit-test.component'
 import {ListMatchComponent} from './PlanningMatch/list-match/list-match.component';
 import { CreateMatchComponent } from './PlanningMatch/create-match/create-match.component';
+import { EditMatchComponent } from './PlanningMatch/edit-match/edit-match.component';
 
 const routes: Routes = [
   {path: 'list-test', component: ListTestComponent},
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path: 'edit-test/:id', component: EditTestComponent},
   {path: 'list-match', component: ListMatchComponent},
   {path: 'create-match', component: CreateMatchComponent},
+  {path: 'edit-match/:id', component: EditMatchComponent},
   {path: '', component: ListTestComponent}
 ];
 
