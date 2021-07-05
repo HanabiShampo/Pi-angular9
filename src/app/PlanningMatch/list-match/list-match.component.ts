@@ -24,4 +24,15 @@ export class ListMatchComponent implements OnInit {
     this.router.navigate(['create-match']);
   }
 
+  deletePlanning(id) {
+    this.planningService.deletePlannedMatch(id).subscribe(()=>{
+      this.myArray =this.myArray.filter(test => test.id !=id) 
+    });
+      this.router.navigate(['list-match']);
+  }
+
+  listTest(){
+    this.router.navigate(['list-test']);
+  }
+
 }
