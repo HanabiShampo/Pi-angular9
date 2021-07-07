@@ -22,8 +22,12 @@
       <td>{{test.lieu}}</td>
       <td>{{test.date}}</td>
       <td>{{test.heure}}</td>
-      <button type="button" class="button1" [routerLink]="['/edit-test/',test.id]" >Update</button>
-      <button class="button1" (click)="deletePlanning(test.id)" style="margin-left: 0px;"> Delete</button>
+      <button mat-icon-button type="button" class="button1" [routerLink]="['/edit-test/',test.id]">
+        <mat-icon class="red-icon">edit</mat-icon>
+      </button>
+      <button mat-icon-button class="button1" (click)="deletePlanning(test.id)" style="margin-left: 0px;">
+        <mat-icon class="red-icon">delete</mat-icon>
+      </button>
       </tr>
       </tbody>
     </table>
