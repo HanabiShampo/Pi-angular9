@@ -15,7 +15,7 @@ export class CreateTestComponent implements OnInit {
   constructor(private formBuilder: FormBuilder,private router: Router, private planningService: PlanningService) {}
   addForm: FormGroup;
    
-  ngOnInit(): void {
+  ngOnInit() {
     this.addForm = this.formBuilder.group({
       id: [],
       titre: ['', Validators.required],

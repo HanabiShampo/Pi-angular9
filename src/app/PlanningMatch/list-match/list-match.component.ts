@@ -37,6 +37,10 @@ export class ListMatchComponent implements OnInit {
     this.router.navigate(['list-test']);
   }
 
+  listEntrainement(){
+    this.router.navigate(['list-entrainement']);
+  }
+
   exportexcel(): void
   {
     
@@ -49,5 +53,6 @@ export class ListMatchComponent implements OnInit {
     XLSX.writeFile(wb, this.fileName);
  
   }
+
 
 }

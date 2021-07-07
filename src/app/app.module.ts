@@ -14,6 +14,8 @@ import { EditTestComponent } from './PlanningTest/edit-test/edit-test.component'
 import { ListMatchComponent } from './PlanningMatch/list-match/list-match.component';
 import { CreateMatchComponent } from './PlanningMatch/create-match/create-match.component';
 import { EditMatchComponent } from './PlanningMatch/edit-match/edit-match.component';
+import { ListEntrainementComponent } from './PlanningEntrainement/list-entrainement/list-entrainement.component';
+import { CreateEntrainementComponent } from './PlanningEntrainement/create-entrainement/create-entrainement.component';
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import { EditMatchComponent } from './PlanningMatch/edit-match/edit-match.compon
     EditTestComponent,
     ListMatchComponent,
     CreateMatchComponent,
-    EditMatchComponent
+    EditMatchComponent,
+    ListEntrainementComponent,
+    CreateEntrainementComponent
   ],
   imports: [
     BrowserModule,

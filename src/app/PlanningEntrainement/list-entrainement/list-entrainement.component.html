@@ -1,0 +1,32 @@
+<div class="container">
+    <h2> Planning Entrainement List</h2>
+      <button class="btn btn-danger" (click)="addPlanning()"> Create Planning</button>
+      <button class="btn btn-danger" (click)="listTest()"> List Planning Test</button>
+      <button class="btn btn-danger" (click)="listMatch()"> List Planning Match</button>
+    <table id="excel-table" class="table table-striped">
+      <thead>
+      <tr>
+        <th class="hidden">Id</th>
+        <th>Equipe</th>
+        <th>Nombre Joueurs</th>
+        <th>Stade</th>
+        <th>Date</th>
+        <th>Heure</th>
+        <th>Commentaire</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let test of myArray">
+        <td class="hidden">{{test.id}}</td>
+        <td>{{test.equipe}}</td>
+      <td>{{test.nbrJoueurs}}</td>
+      <td>{{test.stade}}</td>
+      <td>{{test.date}}</td>
+      <td>{{test.heure}}</td>
+      <td>{{test.commentaire}}</td>
+      
+      
+      </tr>
+      </tbody>
+    </table>
+  </div>

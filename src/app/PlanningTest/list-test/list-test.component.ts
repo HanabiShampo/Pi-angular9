@@ -55,4 +55,8 @@ export class ListTestComponent implements OnInit {
  
   }
 
+  listEntrainement(){
+    this.router.navigate(['list-entrainement']);
+  }
+
 }

@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { PlanningTest } from '../models/planning-test';
 import { PlanningMatch } from '../models/planning-match';
+import { PlanningEntrainement } from '../models/planning-entrainement';
 import { Observable } from 'rxjs';
-
 
 
 @Injectable({
@@ -58,6 +58,28 @@ export class PlanningService {
   
   deletePlannedMatch(id) {
     return this.http.delete(this.baseUrl + '/planning_matches/' + id, {responseType: 'json'});
+  }
+
+                                     //Planning entrainement service       
+                                     
+  getPlannedEntrainement() {
+    return this.http.get<PlanningEntrainement[]>(this.baseUrl+'/planning_entrainements');
+  }
+
+  getPlannedEntrainementById(id: any) {
+    return this.http.get<PlanningEntrainement>(this.baseUrl + '/planning_entrainements/' + id);
+  }
+
+  createPlanningEntrainement(planningEntrainement: PlanningEntrainement) {
+    return this.http.post(this.baseUrl+'/planning_entrainements', planningEntrainement, {responseType: 'json'});
+  }
+
+  updatePlanningEntrainement(id, planningEntrainement:PlanningEntrainement){
+    return this.http.put<PlanningEntrainement>(this.baseUrl + '/planning_entrainements/'+ id,planningEntrainement);
+  }
+  
+  deletePlannedEntrainement(id) {
+    return this.http.delete(this.baseUrl + '/planning_entrainements/' + id, {responseType: 'json'});
   }
 
 }
