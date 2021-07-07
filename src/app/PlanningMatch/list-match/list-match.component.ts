@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
 import {PlanningService} from "../../service/planning.service";
 import { PlanningMatch } from '../../models/planning-match';
+import * as XLSX from 'xlsx';
+
 @Component({
   selector: 'app-list-match',
   templateUrl: './list-match.component.html',
@@ -9,7 +11,7 @@ import { PlanningMatch } from '../../models/planning-match';
 })
 export class ListMatchComponent implements OnInit {
   myArray: any = [];
-
+  fileName= 'Planning Match.xlsx';
   constructor(private router: Router, private planningService: PlanningService) { }
 
   ngOnInit(): void {
@@ -33,6 +35,19 @@ export class ListMatchComponent implements OnInit {
 
   listTest(){
     this.router.navigate(['list-test']);
+  }
+
+  exportexcel(): void
+  {
+    
+    let element = document.getElementById('excel-table');
+    const ws: XLSX.WorkSheet =XLSX.utils.table_to_sheet(element);
+ 
+    const wb: XLSX.WorkBook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, 'Sheet1');
+  
+    XLSX.writeFile(wb, this.fileName);
+ 
   }
 
 }
