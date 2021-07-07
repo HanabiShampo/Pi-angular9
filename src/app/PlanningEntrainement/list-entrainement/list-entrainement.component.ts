@@ -35,4 +35,24 @@ export class ListEntrainementComponent implements OnInit {
     this.router.navigate(['list-match']);
   }
 
+  deletePlanning(id) {
+    this.planningService.deletePlannedEntrainement(id).subscribe(()=>{
+      this.myArray =this.myArray.filter(test => test.id !=id) 
+    });
+      this.router.navigate(['list-entrainement']);
+
+  }
+
+  exportexcel(): void
+  {
+    let element = document.getElementById('excel-table');
+    const ws: XLSX.WorkSheet =XLSX.utils.table_to_sheet(element);
+ 
+    const wb: XLSX.WorkBook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, 'Sheet1');
+   
+    XLSX.writeFile(wb, this.fileName);
+ 
+  }
+
 }

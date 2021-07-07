@@ -8,6 +8,7 @@ import { CreateMatchComponent } from './PlanningMatch/create-match/create-match.
 import { EditMatchComponent } from './PlanningMatch/edit-match/edit-match.component';
 import { ListEntrainementComponent } from './PlanningEntrainement/list-entrainement/list-entrainement.component';
 import { CreateEntrainementComponent } from './PlanningEntrainement/create-entrainement/create-entrainement.component';
+import { EditEntrainementComponent } from './PlanningEntrainement/edit-entrainement/edit-entrainement.component';
 
 const routes: Routes = [
   {path: 'list-test', component: ListTestComponent},
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path: 'create-match', component: CreateMatchComponent},
   {path: 'edit-match/:id', component: EditMatchComponent},
   {path: 'list-entrainement', component: ListEntrainementComponent},
+  {path: 'edit-entrainement/:id', component: EditEntrainementComponent},
   {path: 'create-entrainement', component: CreateEntrainementComponent},
   {path: '', component: ListTestComponent}
 ];
