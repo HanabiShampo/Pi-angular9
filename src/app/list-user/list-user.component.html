@@ -1,0 +1,52 @@
+<div align="center">
+
+  <form>
+    <h2>Liste des users </h2>
+    <div><br></div>
+
+    <div class="panel-body">
+      <table class="table table-bordered">
+        <thead class="thead-light">
+        <tr>
+
+
+          <th>nom</th>
+          <th>nationalite</th>
+          <th>email</th>
+          <th>telephone</th>
+
+          <th>adresse</th>
+          <th>role</th>
+
+          <th>login</th>
+          <th>password</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let o of User ">
+          <td>{{o.nom}}</td>
+          <td>{{o.nationalite}}</td>
+          <td>{{o.email}}</td>
+
+          <td>{{o.telephone}}</td>
+          <td>{{o.adresse}}</td>
+          <td>{{o.role}}</td>
+          <td>{{o.login}}</td>
+          <td>{{o.password}}</td>
+
+          <td style="text-align: center">
+            <a type="button" class="btn btn-danger" (click)="deleteuser(o.id)">Confirmer la supprission</a>
+          </td>
+
+          <td style="text-align: center">
+            <a [routerLink]="['/updUsr/',o.id]">modifier</a>
+          </td>
+
+
+
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </form>
+</div>
