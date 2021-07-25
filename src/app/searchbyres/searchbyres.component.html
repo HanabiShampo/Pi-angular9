@@ -1,0 +1,36 @@
+
+<table class="table table-bordered" >
+              
+    <thead class="thead-light">
+      <tr>
+        <th>equipe</th>
+        <th>stade</th>
+        <th>date</th>
+        <th>type</th>
+
+        <th>adversaire</th>
+        <th>resultat</th>
+    
+      </tr>
+      
+    </thead>
+    <tbody>
+      <tr *ngFor="let o of liste " >
+        <td>{{o.equipe}}</td>
+        <td>{{o.stade}}</td>
+        <td>{{o.date}}</td>
+        <td>{{o.type}}</td>
+        <td>{{o.adversaire}}</td>
+        <td>{{o.res}}</td>
+        
+        <td><button (click)="delete(o.id)" class="btn btn-danger"><i class="far fa-trash-alt"></i>
+        </button>
+          <button (click)="update(o.id)" class="btn btn-info" style="margin-left: 10px"><i class="far fa-edit"></i></button>
+          
+        </td>
+
+       
+
+      </tr>
+    </tbody>
+  </table>

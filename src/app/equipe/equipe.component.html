@@ -1,11 +1,35 @@
+<div class="container-fluid">
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-10"></div>
+    <div class="col-md-2">
+      <p-dialog header="Ajoute Equipe" [(visible)]="display1" styleClass="mydialog" [style]="{width: '50vw'}">
+        <app-ajout-equipe></app-ajout-equipe>
+
+      </p-dialog>
+      <button type="button" (click)="showDialogB()" style="size: 20px; " ><i class="fas fa-plus-circle " ></i></button>
+
+    </div>
+  </div>
+
+</div>
+
+
 <div align="center">
 
     <form>
-      <h2>Liste des equipe </h2>
+      <h2>Liste des equipes </h2>
       <div><br></div>
+      <p-card>
+        <form class="example-full-width">
+          <label class="col-md-5">Recherche equipe</label>
+          <input name="test" matInput placeholder="Ex.nom" class="form-control" [(ngModel)]='listFilter'>
+        </form>
+      </p-card>
     
       <div class="panel-body">
-        <table class="table table-bordered">
+        <table class="table table-bordered" >
           <thead class="thead-light">
             <tr>
               <th>nom</th>
@@ -15,16 +39,23 @@
 
               <th>log</th>
               <th>joueurs</th>
+               <th>Action</th>
             </tr>
+            
           </thead>
           <tbody>
-            <tr *ngFor="let o of Equipe ">
+            <tr *ngFor="let o of Equipe |EquipeFilter :listFilter ">
               <td>{{o.nom}}</td>
               <td>{{o.niveau}}</td>
               <td>{{o.entraineur}}</td>
-              <td>{{o.medcin}}</td>
+              <td>{{o.medecin}}</td>
               <td>{{o.log}}</td>
               <td>{{o.joueurs}}</td>
+              <td><button (click)="delete(o.id)" class="btn btn-danger"><i class="far fa-trash-alt"></i>
+              </button>
+                <button (click)="update(o.id)" class="btn btn-info" style="margin-left: 10px"><i class="far fa-edit"></i></button>
+                
+              </td>
 
 
              
@@ -35,3 +66,4 @@
       </div>
     </form>
   </div>
+</div>
