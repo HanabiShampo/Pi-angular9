@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "football": {
+    "GestionClubSportif": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/football",
+            "outputPath": "dist/GestionClubSportif",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,12 +24,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/custom-theme.scss",
-              "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.css",
-              "node_modules/font-awesome/css/font-awesome.min.css"
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -65,18 +67,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "football:build"
+            "browserTarget": "GestionClubSportif:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "football:build:production"
+              "browserTarget": "GestionClubSportif:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "football:build"
+            "browserTarget": "GestionClubSportif:build"
           }
         },
         "test": {
@@ -91,6 +93,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -113,16 +116,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "football:serve"
+            "devServerTarget": "GestionClubSportif:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "football:serve:production"
+              "devServerTarget": "GestionClubSportif:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "football"
+  "defaultProject": "GestionClubSportif",
+  "cli": {
+    "analytics": "1558ddd3-0ade-4649-9ffc-9a4fe6985c71"
+  }
 }

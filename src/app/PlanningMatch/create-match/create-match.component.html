@@ -1,0 +1,36 @@
+<div class="container">
+    <h2 class="text-center">Add Planning Match</h2>
+    <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="equipe1">Equipe1:</label>
+        <input type="text" formControlName="equipe1" placeholder="equipe1" name="equipe1" class="form-control" id="equipe1">
+      </div>
+  
+      <div class="form-group">
+        <label for="equipe2">Equipe2:</label>
+        <input type="text" formControlName="equipe2" placeholder="equipe2" name="equipe2" class="form-control" id="equipe2">
+      </div>
+  
+      <div class="form-group">
+        <label for="stade">Stade:</label>
+        <input type="text" formControlName="stade" placeholder="stade" name="stade" class="form-control" id="stade">
+      </div>
+
+      <div class="form-group">
+        <label for="type">Type:</label>
+        <input type="text" formControlName="type" placeholder="type" name="type" class="form-control" id="type">
+      </div>
+
+      <div class="form-group">
+        <label for="date">Date:</label>
+        <input type="date" formControlName="date" placeholder="date" name="date" class="form-control" id="date">
+      </div>
+
+      <div class="form-group">
+        <label for="heure">Heure:</label>
+        <input type="time" formControlName="heure" placeholder="heure" name="heure" class="form-control" id="heure">
+      </div>
+  
+      <button class="btn btn-success">Create</button>
+    </form>
+  </div>

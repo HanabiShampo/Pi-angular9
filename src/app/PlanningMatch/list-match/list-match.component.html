@@ -1,0 +1,37 @@
+<div class="container">
+    <h2> Planning Matchs List</h2>
+    <button class="btn btn-danger" (click)="listTest()"> List Planning Test</button>
+    <button class="btn btn-danger" (click)="listEntrainement()"> List Planning Entrainement</button>
+    <button class="btn btn-danger" (click)="addPlanning()"> Create Planning</button>
+    <button class="btn btn-danger" (click)="exportexcel()">Export to Excel</button>
+    <table id="excel-table" class="table table-striped">
+      <thead>
+      <tr>
+        <th class="hidden">Id</th>
+        <th>Equipe1</th>
+        <th>Equipe2</th>
+        <th>Stade</th>
+        <th>Type</th>
+        <th>Date</th>
+        <th>Heure</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let test of myArray">
+        <td class="hidden">{{test.id}}</td>
+        <td>{{test.equipe1}}</td>
+      <td>{{test.equipe2}}</td>
+      <td>{{test.stade}}</td>
+      <td>{{test.type}}</td>
+      <td>{{test.date}}</td>
+      <td>{{test.heure}}</td>
+      <button mat-icon-button type="button" class="button1" [routerLink]="['/edit-match/',test.id]">
+        <mat-icon class="red-icon">edit</mat-icon>
+      </button>
+      <button mat-icon-button class="button1" (click)="deletePlanning(test.id)" style="margin-left: 0px;">
+        <mat-icon class="red-icon">delete</mat-icon>
+      </button>
+      </tr>
+      </tbody>
+    </table>
+  </div>
