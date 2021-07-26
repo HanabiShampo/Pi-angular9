@@ -7,6 +7,11 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
+import { ShareIconsModule } from 'ngx-sharebuttons/icons';
 
 import {ListTestComponent} from './PlanningTest/list-test/list-test.component';
 import { CreateTestComponent } from './PlanningTest/create-test/create-test.component';
@@ -18,6 +23,15 @@ import { ListEntrainementComponent } from './PlanningEntrainement/list-entrainem
 import { CreateEntrainementComponent } from './PlanningEntrainement/create-entrainement/create-entrainement.component';
 import { EditEntrainementComponent } from './PlanningEntrainement/edit-entrainement/edit-entrainement.component';
 
+import { GetEventComponent } from './get-event/get-event.component';
+import { CreateEventComponent } from './create-event/create-event.component';
+import { DeleteEventComponent } from './delete-event/delete-event.component';
+import { SearchfilterPipe } from './searchfilter.pipe';
+import { HomeComponent } from './home/home.component';
+import { UpdateEventComponent } from './update-event/update-event.component';
+import { EndDateValidatorDirective } from './EndDateValue';
+import { UploadFilesComponent } from './upload-files/upload-files.component';
+import { DetailsComponent } from './details/details.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +44,16 @@ import { EditEntrainementComponent } from './PlanningEntrainement/edit-entrainem
     EditMatchComponent,
     ListEntrainementComponent,
     CreateEntrainementComponent,
-    EditEntrainementComponent
+    EditEntrainementComponent,
+    GetEventComponent,
+    CreateEventComponent,
+    DeleteEventComponent,
+    HomeComponent,
+    SearchfilterPipe,
+    UpdateEventComponent,
+    EndDateValidatorDirective,
+    UploadFilesComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -39,9 +62,16 @@ import { EditEntrainementComponent } from './PlanningEntrainement/edit-entrainem
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
+    NgxPaginationModule,
+    MatNativeDateModule,
+    MatFormFieldModule,
+    ShareButtonsModule.withConfig({
+      debug: true,
+    }),
+    ShareIconsModule
   ],
-  providers: [PlanningService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

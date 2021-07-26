@@ -9,8 +9,20 @@ import { EditMatchComponent } from './PlanningMatch/edit-match/edit-match.compon
 import { ListEntrainementComponent } from './PlanningEntrainement/list-entrainement/list-entrainement.component';
 import { CreateEntrainementComponent } from './PlanningEntrainement/create-entrainement/create-entrainement.component';
 import { EditEntrainementComponent } from './PlanningEntrainement/edit-entrainement/edit-entrainement.component';
+import { CreateEventComponent } from './create-event/create-event.component';
+import { GetEventComponent } from './get-event/get-event.component';
+import { DeleteEventComponent } from './delete-event/delete-event.component';
+import { UpdateEventComponent } from './update-event/update-event.component';
+import { HomeComponent } from './home/home.component';
+import { DetailsComponent } from './details/details.component';
+
 
 const routes: Routes = [
+  {path: 'first-component', component: CreateEventComponent},
+  {path: 's', component: GetEventComponent},
+  {path: 'delete/:id', component: DeleteEventComponent},
+  {path: 'update/:id', component: UpdateEventComponent},
+  {path: "details/:id", component: DetailsComponent},
   {path: 'list-test', component: ListTestComponent},
   {path: 'create-test', component: CreateTestComponent},
   {path: 'edit-test/:id', component: EditTestComponent},
@@ -20,7 +32,8 @@ const routes: Routes = [
   {path: 'list-entrainement', component: ListEntrainementComponent},
   {path: 'edit-entrainement/:id', component: EditEntrainementComponent},
   {path: 'create-entrainement', component: CreateEntrainementComponent},
-  {path: '', component: ListTestComponent}
+  {path: '', component: HomeComponent}
+  //{path: '', component: ListTestComponent}
 ];
 
 @NgModule({
