@@ -1,0 +1,81 @@
+
+<div><br></div>
+<div class="col-md-12">
+
+
+    <div class="card-body">
+      <form [formGroup]="registerForm"  (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+          <label>equipe</label>
+          <input style="border-bottom: solid;" type="text" formControlName="equipe" class="form-control" [(ngModel)]="Match.equipe"
+            name="equipe" [ngClass]="{ 'is-invalid': submitted && f.equipe.errors }"/>
+            <div *ngIf="submitted && f.equipe.errors" class="invalid-feedback">
+              <div *ngIf="f.equipe.errors.required">equipe obligtoire</div>
+            </div>
+
+        </div>
+
+
+        <div class="form-group">
+          <label for="cin">stade</label>
+          <select style="border-bottom: solid;" type="text" formControlName="stade" class="form-control" [(ngModel)]="Match.stade"
+          name="stade" [ngClass]="{ 'is-invalid': submitted && f.stade.errors }">
+        <option value="rades">
+          stade rades
+          </option>
+          <option value="manzeh">
+            stade menzah
+            </option>
+        </select>
+          <div *ngIf="submitted && f.stade.errors" class="invalid-feedback">
+            <div *ngIf="f.stade.errors.required">equipe obligtoire</div>
+          </div>
+
+        </div>
+<div class="form-group">
+          <label for="cin">date</label>
+          <input style="border-bottom: solid;" type="date" formControlName="date" class="form-control" [(ngModel)]="Match.date"
+            name="date" [ngClass]="{ 'is-invalid': submitted && f.date.errors }"/>
+            <div *ngIf="submitted && f.date.errors" class="invalid-feedback">
+              <div *ngIf="f.date.errors.required">equipe obligtoire</div>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+          <label for="cin">type</label>
+          <input style="border-bottom: solid;" type="text" formControlName="type" class="form-control" [(ngModel)]="Match.type"
+            name="type" [ngClass]="{ 'is-invalid': submitted && f.type.errors }"/>
+            <div *ngIf="submitted && f.type.errors" class="invalid-feedback">
+              <div *ngIf="f.type.errors.required">equipe obligtoire</div>
+            </div>
+        </div>
+        <div class="form-group">
+          <label for="cin">adversaire</label>
+          <input style="border-bottom: solid;" type="text" formControlName="adversaire" class="form-control" [(ngModel)]="Match.adversaire"
+            name="adversaire" [ngClass]="{ 'is-invalid': submitted && f.adversaire.errors }"/>
+            <div *ngIf="submitted && f.adversaire.errors" class="invalid-feedback">
+              <div *ngIf="f.adversaire.errors.required">equipe obligtoire</div>
+            </div>
+        </div>
+        <div class="form-group">
+          <label for="cin">resultat</label>
+          <input style="border-bottom: solid;" type="text" formControlName="res" class="form-control" [(ngModel)]="Match.res"
+            name="res" [ngClass]="{ 'is-invalid': submitted && f.res.errors }"/>
+            <div *ngIf="submitted && f.res.errors" class="invalid-feedback">
+              <div *ngIf="f.res.errors.required">equipe obligtoire</div>
+            </div>
+        </div>
+
+
+        <div><br>
+          <div>
+            <br>
+          </div>
+          <button class="btn btn-info" type="submit">Envoyer</button>
+        </div>
+      </form>
+    </div>
+  </div>
+

@@ -2,14 +2,228 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>GestionClubSportif</title>
+  <title>Gestion Equipe</title>
   <base href="/">
+  <link rel="stylesheet" href="assets/plugins/fullcalendar/main.min.css">
+  <link rel="stylesheet" href="assets/plugins/fullcalendar-daygrid/main.min.css">
+  <link rel="stylesheet" href="assets/plugins/fullcalendar-timegrid/main.min.css">
+  <link rel="stylesheet" href="assets/plugins/fullcalendar-bootstrap/main.min.css">
+<!-- Google Font: Source Sans Pro -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="assets/plugins/fontawesome-free/css/all.min.css">
+<!-- Theme style -->
+<link rel="stylesheet" href="assets/dist/css/adminlte.min.css">
+
+
+    
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!--START CSS-->
+  <link rel="stylesheet" href="assets/css/nicdark_style.css"> <!--style-->
+  <link rel="stylesheet" href="assets/css/nicdark_responsive.css"> <!--nicdark_responsive-->
+  <link rel="stylesheet" href="assets/css/nicdark_menu.css"> <!--nicdark_responsive-->
+
+
+  <!--revslider-->
+  <link rel="stylesheet" href="assets/css/revslider/settings.css"> <!--revslider-->
+
+  <!--END CSS-->
+
+  <!--google fonts-->
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> <!-- font-family: 'Montserrat', sans-serif; -->
+  <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'> <!-- font-family: 'Raleway', sans-serif; -->
+  <link href='http://fonts.googleapis.com/css?family=Montez' rel='stylesheet' type='text/css'> <!-- font-family: 'Montez', cursive; -->
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <!--FAVICONS-->
+  <link rel="shortcut icon" href="assets/img/favicon/favicon.ico">
+  <link rel="apple-touch-icon" href="assets/img/favicon/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicon/apple-touch-icon-114x114.png">
+  <!--END FAVICONS-->
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body>
+<body class="mat-typography">
   <app-root></app-root>
+
+
+  <script src="assets/plugins/jquery/jquery.min.js"></script>
+  <!-- Bootstrap 4 -->
   <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="assets/dist/js/adminlte.min.js"></script>
+
+
+
+
+
+
+  <!--main-->
+  <script src="assets/js/main/jquery.min.js"></script> <!--Jquery-->
+  <script src="assets/js/main/jquery-ui.js"></script> <!--Jquery UI-->
+  <script src="assets/js/main/excanvas.js"></script> <!--canvas need for ie-->
+
+  <!--plugins-->
+  <script src="assets/js/plugins/revslider/jquery.themepunch.tools.min.js"></script> <!--revslider-->
+  <script src="assets/js/plugins/revslider/jquery.themepunch.revolution.min.js"></script> <!--revslider-->
+
+  <!--menu-->
+  <script src="assets/js/plugins/menu/superfish.min.js"></script> <!--superfish-->
+  <script src="assets/js/plugins/menu/tinynav.min.js"></script> <!--tinynav-->
+
+  <!--other-->
+  <script src="assets/plugins/moment/moment.min.js"></script>
+<script src="assets/plugins/fullcalendar/main.min.js"></script>
+<script src="assets/plugins/fullcalendar-daygrid/main.min.js"></script>
+<script src="assets/plugins/fullcalendar-timegrid/main.min.js"></script>
+<script src="assets/plugins/fullcalendar-interaction/main.min.js"></script>
+<script src="assets/plugins/fullcalendar-bootstrap/main.min.js"></script>
+  <script src="assets/js/plugins/isotope/isotope.pkgd.min.js"></script> <!--isotope-->
+  <script src="assets/js/plugins/mpopup/jquery.magnific-popup.min.js"></script> <!--mpopup-->
+  <script src="assets/js/plugins/scroolto/scroolto.js"></script> <!--Scrool To-->
+  <script src="assets/js/plugins/nicescrool/jquery.nicescroll.min.js"></script> <!--Nice Scroll-->
+  <script src="assets/js/plugins/inview/jquery.inview.min.js"></script> <!--inview-->
+  <script src="assets/js/plugins/parallax/jquery.parallax-1.1.3.js"></script> <!--parallax-->
+  <script src="assets/js/plugins/countto/jquery.countTo.js"></script> <!--jquery.countTo-->
+  <script src="assets/js/plugins/countdown/jquery.countdown.js"></script> <!--countdown-->
+
+  <!--settings-->
+  <script src="assets/js/settings.js"></script> <!--settings-->
+  <!--custom js-->
+  <script type="text/javascript">
+    jQuery(document).ready(function() {
+
+
+      //START SLIDE
+      jQuery('.nicdark_slide1').show().revolution(
+        {
+          dottedOverlay:"none",
+          delay:16000,
+          startwidth:1170,
+          startheight:650,
+          hideThumbs:200,
+
+          thumbWidth:100,
+          thumbHeight:50,
+          thumbAmount:5,
+
+          navigationType:"none",
+          navigationArrows:"solo",
+          navigationStyle:"preview2",
+
+          touchenabled:"on",
+          onHoverStop:"on",
+
+          swipe_velocity: 0.7,
+          swipe_min_touches: 1,
+          swipe_max_touches: 1,
+          drag_block_vertical: false,
+
+          parallax:"mouse",
+          parallaxBgFreeze:"on",
+          parallaxLevels:[7,4,3,2,5,4,3,2,1,0],
+
+          keyboardNavigation:"off",
+
+          navigationHAlign:"center",
+          navigationVAlign:"bottom",
+          navigationHOffset:0,
+          navigationVOffset:20,
+
+          soloArrowLeftHalign:"left",
+          soloArrowLeftValign:"center",
+          soloArrowLeftHOffset:20,
+          soloArrowLeftVOffset:0,
+
+          soloArrowRightHalign:"right",
+          soloArrowRightValign:"center",
+          soloArrowRightHOffset:20,
+          soloArrowRightVOffset:0,
+
+          shadow:0,
+          fullWidth:"on",
+          fullScreen:"off",
+
+          spinner:"spinner4",
+
+          stopLoop:"off",
+          stopAfterLoops:-1,
+          stopAtSlide:-1,
+
+          shuffle:"off",
+
+          autoHeight:"off",
+          forceFullWidth:"off",
+
+          hideTimerBar: "on",
+
+          hideThumbsOnMobile:"off",
+          hideNavDelayOnMobile:1500,
+          hideBulletsOnMobile:"off",
+          hideArrowsOnMobile:"off",
+          hideThumbsUnderResolution:0,
+
+          hideSliderAtLimit:0,
+          hideCaptionAtLimit:0,
+          hideAllCaptionAtLilmit:0,
+          startWithSlide:0,
+          videoJsPath:"rs-plugin/videoassets/js/",
+          fullScreenOffsetContainer: ""
+        });
+      //END SLIDE
+
+
+
+      //START PARALLAX SECTIONS
+      $('#nicdark_parallax_big_image').parallax("50%", 0.3);
+      $('#nicdark_parallax_2_btns').parallax("50%", 0.3);
+      $('#nicdark_parallax_countdown').parallax("50%", 0.3);
+      $('#nicdark_parallax_counter').parallax("50%", 0.3);
+      //END PARALLAX SECTIONS
+
+
+
+      //START COUNTDOWN GRID SECTION
+      //variables
+      var endDate = "June 06, 2016 10:30:00";
+      var grid = "grid_3";
+      //insert the class nicdark_displaynone in the var if you wnat to hide the visualization
+      var display_years = "nicdark_displaynone";
+      var display_days = "";
+      var display_hours = "";
+      var display_minutes = "";
+      var display_seconds = "";
+      //call
+      $(".nicdark_countdown").countdown({
+        date: endDate,
+        render: function(data) {
+          $(this.el).html("<div class=\"grid "+ grid +" "+ display_years +" \"><div class=\"nicdark_textevidence center\"><h1 class=\"subtitle white extrasize\">"+ this.leadingZeros(data.years, 4) +"</h1><div class=\"nicdark_space20\"></div><a class=\"nicdark_btn nicdark_bg_blue small nicdark_shadow nicdark_radius white\">YEARS</a><div class=\"nicdark_space5\"></div></div></div><div class=\"grid "+ grid +" "+ display_days +"  \"><div class=\"nicdark_textevidence center\"><h1 class=\"subtitle white extrasize\">"+ this.leadingZeros(data.days, 3) +"</h1><div class=\"nicdark_space20\"></div><a class=\"nicdark_btn nicdark_bg_blue small nicdark_shadow nicdark_radius white\">DAYS</a><div class=\"nicdark_space5\"></div></div></div><div class=\"grid "+ grid +" "+ display_hours +"  \"><div class=\"nicdark_textevidence center\"><h1 class=\"subtitle white extrasize\">"+ this.leadingZeros(data.hours, 2) +"</h1><div class=\"nicdark_space20\"></div><a class=\"nicdark_btn nicdark_bg_yellow small nicdark_shadow nicdark_radius white\">HOURS</a><div class=\"nicdark_space5\"></div></div></div><div class=\"grid "+ grid +" "+ display_minutes +"  \"><div class=\"nicdark_textevidence center\"><h1 class=\"subtitle white extrasize\">"+ this.leadingZeros(data.min, 2) +"</h1><div class=\"nicdark_space20\"></div><a class=\"nicdark_btn nicdark_bg_green small nicdark_shadow nicdark_radius white\">MINUTES</a><div class=\"nicdark_space5\"></div></div></div><div class=\"grid "+ grid +" "+ display_seconds +"  \"><div class=\"nicdark_textevidence center\"><h1 class=\"subtitle white extrasize\">"+ this.leadingZeros(data.sec, 2) +"</h1><div class=\"nicdark_space20\"></div><a class=\"nicdark_btn nicdark_bg_violet small nicdark_shadow nicdark_radius white\">SECONDS</a><div class=\"nicdark_space5\"></div></div></div>");
+        }
+      });
+      //END COUNTDOWN GRID SECTION
+
+    });
+  </script>
+  <!--custom js-->
+
+
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','../../../../../www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-49425562-7', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
 </body>
 </html>
+

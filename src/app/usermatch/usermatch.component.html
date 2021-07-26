@@ -1,0 +1,26 @@
+<div><br></div>
+<div class="container-fluid">
+    <div align="center">
+        <h2> Match</h2>
+        <div><br></div>
+<p-card [style]="{width: '70vw'}" *ngFor="let o of Match ">
+ 
+  <div class="row">
+    <div class="col-2"><h2 style="color: black;">{{o.equipe}}</h2> </div>
+   
+<div class="col-2" *ngIf="o.equipe ==='CA'"><img src="assets/img/CA.png" alt="user-avatar" class="img-circle img-fluid" width="80" height="80">
+</div>
+<div class="col-2" *ngIf="o.equipe ==='css'"><img src="assets/img/css.png" alt="user-avatar" class="img-circle img-fluid" width="80" height="80">
+</div>
+
+    <div class="col-2"><h2>VS</h2></div>
+    <div class="col-2"><h2>{{o.adversaire}}</h2></div>
+    <div class="col-2" *ngIf="o.adversaire ==='Espérance'"><img src="assets/img/EST.png" alt="user-avatar" class="img-circle img-fluid" width="80" height="80">
+    </div>
+    <div class="col-2" *ngIf="o.adversaire ==='tun'"><img src="assets/img/tu.png" alt="user-avatar" class="img-circle img-fluid" width="80" height="80">
+    </div>
+   
+  </div>
+</p-card>
+</div>
+</div>>
