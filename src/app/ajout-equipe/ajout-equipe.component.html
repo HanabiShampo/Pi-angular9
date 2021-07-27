@@ -1,0 +1,119 @@
+<div><br></div>
+<div class="col-md-12">
+
+
+    <div class="card-body">
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+          <label>Nom</label>
+
+            <input style="border-bottom: solid;" type="text" formControlName="nom" class="form-control" [(ngModel)]="equipe.nom"
+            name="nom" [ngClass]="{ 'is-invalid': submitted && f.nom.errors }"/>
+            <div *ngIf="submitted && f.nom.errors" class="invalid-feedback">
+              <div *ngIf="f.nom.errors.required">nom obligtoire</div>
+            </div>
+
+        </div>
+
+
+
+
+        <div class="form-group">
+          <label for="cin">Niveau</label>
+          
+            <input style="border-bottom: solid;" type="text" formControlName="niveau" class="form-control" [(ngModel)]="equipe.niveau"
+            name="niveau" [ngClass]="{ 'is-invalid': submitted && f.niveau.errors }"/>
+            <div *ngIf="submitted && f.niveau.errors" class="invalid-feedback">
+              <div *ngIf="f.niveau.errors.required">niveau obligtoire</div>
+            </div>
+
+        </div>
+<div class="form-group">
+          <label for="cin">Entraineur</label>
+        
+            <input style="border-bottom: solid;" type="text" formControlName="entraineur" class="form-control" [(ngModel)]="equipe.entraineur"
+            name="entraineur" [ngClass]="{ 'is-invalid': submitted && f.entraineur.errors }"/>
+            <div *ngIf="submitted && f.entraineur.errors" class="invalid-feedback">
+              <div *ngIf="f.entraineur.errors.required">entraineur obligtoire</div>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+          <label for="cin">Joueurs</label>
+          
+
+            <input style="border-bottom: solid;" type="text" formControlName="joueurs" class="form-control" [(ngModel)]="equipe.joueurs"
+            name="joueurs" [ngClass]="{ 'is-invalid': submitted && f.joueurs.errors }"/>
+            <div *ngIf="submitted && f.joueurs.errors" class="invalid-feedback">
+              <div *ngIf="f.joueurs.errors.required">joueurs obligtoire</div>
+            </div>
+        </div>
+        <div class="form-group">
+          <label for="cin">Medecin</label>
+          
+
+
+            <input style="border-bottom: solid;" type="text" formControlName="medecin" class="form-control" [(ngModel)]="equipe.medecin"
+            name="medecin" [ngClass]="{ 'is-invalid': submitted && f.medecin.errors }"/>
+            <div *ngIf="submitted && f.medecin.errors" class="invalid-feedback">
+              <div *ngIf="f.medecin.errors.required">medecin obligtoire</div>
+            </div>
+        </div>
+        <div class="form-group">
+          <label for="cin">Log</label>
+          
+            <input style="border-bottom: solid;" type="text" formControlName="log" class="form-control" [(ngModel)]="equipe.log"
+            name="log" [ngClass]="{ 'is-invalid': submitted && f.log.errors }"/>
+            <div *ngIf="submitted && f.log.errors" class="invalid-feedback">
+              <div *ngIf="f.log.errors.required">log obligtoire</div>
+            </div>
+        </div>
+
+
+        <div><br>
+          <div>
+            <br>
+          </div>
+          <button class="btn btn-info">Envoyer</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

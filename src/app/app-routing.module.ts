@@ -15,6 +15,13 @@ import { DeleteEventComponent } from './delete-event/delete-event.component';
 import { UpdateEventComponent } from './update-event/update-event.component';
 import { HomeComponent } from './home/home.component';
 import { DetailsComponent } from './details/details.component';
+import { EquipeComponent } from './equipe/equipe.component';
+import { UpdateEquipeComponent } from './update-equipe/update-equipe.component';
+import { MatchComponent } from './match/match.component';
+import { UpdatematchComponent } from './updatematch/updatematch.component';
+import { SearchbyresComponent } from './searchbyres/searchbyres.component';
+import { StatMatchComponent } from './stat-match/stat-match.component';
+import { UsermatchComponent } from './usermatch/usermatch.component';
 
 
 const routes: Routes = [
@@ -32,7 +39,14 @@ const routes: Routes = [
   {path: 'list-entrainement', component: ListEntrainementComponent},
   {path: 'edit-entrainement/:id', component: EditEntrainementComponent},
   {path: 'create-entrainement', component: CreateEntrainementComponent},
-  {path: '', component: HomeComponent}
+  {path: '', component: HomeComponent},
+  { path: 'getEquipe', component: EquipeComponent },
+  { path: 'updateEquipe/:id', component: UpdateEquipeComponent },
+{ path: 'getmatch', component: MatchComponent },
+{ path: 'updatematch/:id', component: UpdatematchComponent },
+{ path: 'searchbyres/:res', component: SearchbyresComponent },
+{ path: 'stat', component: StatMatchComponent },
+{ path: 'match', component: UsermatchComponent },
   //{path: '', component: ListTestComponent}
 ];
 

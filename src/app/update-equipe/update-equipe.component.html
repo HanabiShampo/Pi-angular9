@@ -1,0 +1,56 @@
+<div><br></div>
+<div class="col-md-12">
+
+
+    <div class="card-body">
+      <form (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+          <label>Nom</label>
+          <input style="border-bottom: solid;" type="text" class="form-control" [(ngModel)]="equipe.nom"
+            name="nom" />
+
+        </div>
+
+
+
+
+        <div class="form-group">
+          <label for="cin">Niveau</label>
+          <input style="border-bottom: solid;" type="text" class="form-control" [(ngModel)]="equipe.niveau"
+            name="niveau" />
+
+        </div>
+<div class="form-group">
+          <label for="cin">Horaire</label>
+          <input style="border-bottom: solid;" type="text" class="form-control" [(ngModel)]="equipe.entraineur"
+            name="entraineur" />
+        </div>
+
+
+        <div class="form-group">
+          <label for="cin">Horaire</label>
+          <input style="border-bottom: solid;" type="text" class="form-control" [(ngModel)]="equipe.joueurs"
+            name="joueurs" />
+        </div>
+        <div class="form-group">
+          <label for="cin">Lieu</label>
+          <input style="border-bottom: solid;" type="text" class="form-control" [(ngModel)]="equipe.medecin"
+            name="medecin" />
+        </div>
+        <div class="form-group">
+          <label for="cin">Lieu</label>
+          <input style="border-bottom: solid;" type="text" class="form-control" [(ngModel)]="equipe.log"
+            name="log" />
+        </div>
+
+
+        <div><br>
+          <div>
+            <br>
+          </div>
+          <button class="btn btn-info" type="submit">Envoyer</button>
+        </div>
+      </form>
+    </div>
+  </div>

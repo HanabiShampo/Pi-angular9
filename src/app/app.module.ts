@@ -32,6 +32,34 @@ import { UpdateEventComponent } from './update-event/update-event.component';
 import { EndDateValidatorDirective } from './EndDateValue';
 import { UploadFilesComponent } from './upload-files/upload-files.component';
 import { DetailsComponent } from './details/details.component';
+////
+
+
+
+import { AjoutEquipeComponent } from './ajout-equipe/ajout-equipe.component';
+
+import { EquipeComponent } from './equipe/equipe.component';
+import {AccordionModule} from 'primeng/accordion';     //accordion and accordion tab
+import { TableModule } from 'primeng/table';            
+
+import { UpdateEquipeComponent } from './update-equipe/update-equipe.component';
+import { Routes, RouterModule } from '@angular/router';
+
+import { EquipeFilterPipe } from './equipe/equipe-filter.pipe';
+import { CardModule } from 'primeng/card';
+import { DialogModule } from 'primeng/dialog';
+
+import { ButtonModule } from 'primeng/button';
+import { MatchComponent } from './match/match.component';
+import { UpdatematchComponent } from './updatematch/updatematch.component';
+import { AjoutematchComponent } from './ajoutematch/ajoutematch.component';
+import { StatMatchComponent } from './stat-match/stat-match.component';
+import {ChartModule} from 'primeng/chart';
+import { SearchbyresComponent } from './searchbyres/searchbyres.component';
+import { UsermatchComponent } from './usermatch/usermatch.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -53,7 +81,19 @@ import { DetailsComponent } from './details/details.component';
     UpdateEventComponent,
     EndDateValidatorDirective,
     UploadFilesComponent,
-    DetailsComponent
+    DetailsComponent,
+    AppComponent,
+    AjoutEquipeComponent,
+    EquipeComponent,
+    UpdateEquipeComponent,
+    EquipeFilterPipe,
+    MatchComponent,
+    UpdatematchComponent,
+    AjoutematchComponent,
+    StatMatchComponent,
+    SearchbyresComponent,
+    UsermatchComponent
+
   ],
   imports: [
     BrowserModule,
@@ -69,7 +109,19 @@ import { DetailsComponent } from './details/details.component';
     ShareButtonsModule.withConfig({
       debug: true,
     }),
-    ShareIconsModule
+    ShareIconsModule,
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    AccordionModule,
+    TableModule,
+    FormsModule,
+    CardModule,
+    DialogModule ,
+    BrowserAnimationsModule,
+    ButtonModule,
+    ReactiveFormsModule,
+    ChartModule
   ],
   providers: [],
   bootstrap: [AppComponent]
