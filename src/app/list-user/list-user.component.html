@@ -1,0 +1,78 @@
+
+
+<html>
+
+
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">HOME</a>
+    <a href="Ajout" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Ajout User</a>
+
+
+  </div>
+</div>
+<div align="center">
+
+  <form>
+
+    <a [routerLink]="['']">home</a>
+
+    <h2>Liste des users </h2>
+    <div><br></div>
+
+    <div class="panel-body">
+      <table class="table table-bordered">
+        <thead class="thead-light">
+        <tr>
+
+
+          <th>nom</th>
+          <th>nationalite</th>
+          <th>email</th>
+          <th>telephone</th>
+
+          <th>adresse</th>
+          <th>role</th>
+
+          <th>login</th>
+          <th>password</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let o of User ">
+          <td>{{o.nom}}</td>
+          <td>{{o.nationalite}}</td>
+          <td>{{o.email}}</td>
+
+          <td>{{o.telephone}}</td>
+          <td>{{o.adresse}}</td>
+          <td>{{o.role}}</td>
+          <td>{{o.login}}</td>
+          <td>{{o.password}}</td>
+
+          <td style="text-align: center">
+            <a type="button" class="btn btn-danger" (click)="deleteuser(o.id)">supprimer</a>
+          </td>
+
+          <td style="text-align: center">
+            <a   type="button" class="btn btn-danger" [routerLink]="['/updUsr/',o.id]"  >modifier</a>
+          </td>
+
+
+
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </form>
+</div>
+</html>

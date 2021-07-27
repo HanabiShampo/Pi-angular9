@@ -22,7 +22,10 @@ import { UpdatematchComponent } from './updatematch/updatematch.component';
 import { SearchbyresComponent } from './searchbyres/searchbyres.component';
 import { StatMatchComponent } from './stat-match/stat-match.component';
 import { UsermatchComponent } from './usermatch/usermatch.component';
-
+import {ListUserComponent} from './list-user/list-user.component';
+import {UpdateUComponent} from './update-u/update-u.component';
+import {AjoutUComponent} from './ajout-u/ajout-u.component';
+import {LoginComponent} from './login/login.component';
 
 const routes: Routes = [
   {path: 'first-component', component: CreateEventComponent},
@@ -48,6 +51,11 @@ const routes: Routes = [
 { path: 'stat', component: StatMatchComponent },
 { path: 'match', component: UsermatchComponent },
   //{path: '', component: ListTestComponent}
+  { path : 'list', component: ListUserComponent},
+  { path: 'updUsr/:id', component: UpdateUComponent},
+  { path : 'Ajout', component: AjoutUComponent},
+  { path : 'login', component: LoginComponent},
+
 ];
 
 @NgModule({
